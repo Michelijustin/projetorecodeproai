@@ -108,48 +108,128 @@ div iframe{
     color: rgb(1, 162, 1);
 }
 
-.formdoar{
-    display: flex;
-    justify-content: center;
-}
-.formdoar h2{
-    margin-bottom: 20px;
+.pai{
+    width: 100%;
+    height: 500px;
+    position: relative;
 }
 
-form{
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 10px;
-    border: 2px solid black;
+.tela{
+    width: 250px;
+    height: 500px;
+    background-color: #007D32;
     border-radius: 20px;
-    background-color: rgba(0, 128, 0, 0.466);
-    max-width: 600px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.669);
-}
-form p{
-    margin-bottom: 20px;
-}
-form input{
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    font-size: 15px;
-}
-form input:focus-within{
-    background-color: greenyellow;
-    color: black;
-}
-.botoes{
-    display: flex;
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
-.botao [type=reset], [type=submit]{
-    width: 110px;
-    font-size: 1.2em;
-    background-color: rgb(6, 70, 6);
-    border: 0px;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 5px;
-   color: white;
+.imagem{
+    background-image: url(img/crianças.jpg);
+    height: 220px;
+    width: 220px;
+    background-size: cover;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+form p{
+    margin: 6px;
+}
+
+form p input{
+    background-color: #DCFFD6;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+}
+form p input[type=submit]{
+    background-color: #4FAD64;
+    color: white;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+form p input[type=submit]:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+    .pai{
+        height: 350px;
+    }
+    .tela{
+        width: 85vw;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .imagem{
+        height: 100%;
+        width: 50%;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    form p{
+        margin: 10px;
+    }
+
+    .doar{
+       margin-right: 10px;
+    }
+
+    form p input[type=submit]{
+        height: 40px;
+    }
+
+}
+
+@media screen and (min-width:992px){
+    .pai{
+        height: 350px;
+    }
+    .tela{
+        width: 80vw;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .imagem{
+        height: 100%;
+        width: 50%;
+        margin-top: 0px;
+        margin-left: 0px;
+        border-radius: 0px;
+    }
+
+    form p{
+        margin: 15px;
+        font-size: 18px;
+    }
+
+    form p input{
+        font-size: 17px;
+    }
+
+    .doar{
+        width: 50%;
+    }
+
+    form p input[type=submit]{
+        margin-top: 0px;
+        height: 43px;
+        font-size: 20px;
+    }
+
 }
